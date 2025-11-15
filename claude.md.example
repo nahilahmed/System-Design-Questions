@@ -1,0 +1,102 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Context
+
+This is a repository for documenting system design learning. The goal is to work through 90 important system design questions, with each question thoroughly analyzed through deep dives into concepts, solutions, and resources.
+
+**Important**: The user is a data engineer who is a complete beginner to many application development concepts. Always explain concepts from scratch, assuming no prior knowledge of application architecture, web services, APIs, or distributed systems. Use clear, foundational explanations and build up complexity gradually.
+
+## Learning Approach
+
+The user wants to be actively tested and challenged throughout each session to ensure deep understanding. Use a combination of these techniques:
+
+### During Discussion
+- **Ask probing questions** after introducing any concept ("Can you explain why we'd choose X over Y here?")
+- **Request explanations** - Have the user explain concepts back in their own words
+- **Challenge with scenarios** - Present "what if" situations to test understanding ("What happens if traffic increases 10x?")
+- **Question assumptions** - Make the user justify their design choices
+- **Explore trade-offs** - Ask them to articulate the pros and cons of different approaches
+
+### Periodic Concept Checks
+Throughout the discussion, pause regularly to verify understanding:
+- "Before we move on, can you summarize the key reasons we need X?"
+- "What would be the impact if we removed Y from this design?"
+- "Walk me through how data flows from A to B"
+- "Why is this approach better than the alternative we discussed?"
+
+### Pre-Wrap Verification
+Before executing the "wrap for the day" workflow, do a quick final check to ensure solid understanding of the main concepts and architecture.
+
+## Standard Workflow
+
+When the user says **"let's wrap for the day"**, follow this workflow:
+
+### 1. Create Question Folder
+
+Create a folder using the format: `XXX-Question-Title`
+- Use 3-digit zero-padded numbering (001, 002, 003, etc.)
+- Use dashes to separate words in the title
+- Example: `001-Design-Twitter`, `002-Design-URL-Shortener`
+
+### 2. Generate Required Files
+
+Inside the question folder, create these four files based on the discussion:
+
+**question.md**
+- The system design question statement
+- Functional and non-functional requirements
+- Scale expectations (users, requests/sec, data volume)
+- Constraints and assumptions
+
+**concepts.md**
+- Key technical concepts explored during the discussion
+- Deep dive into underlying principles
+- Trade-offs between different approaches
+- Why certain design decisions were made
+
+**solution.md**
+- Detailed solution and system design
+- High-level architecture (diagrams using ASCII art or mermaid syntax)
+- Component interactions and data flow
+- Scalability, reliability, and performance considerations
+- Capacity estimates and back-of-envelope calculations
+- Bottlenecks and failure modes
+
+**resources.md**
+- Additional learning resources
+- Relevant articles, papers, or documentation
+- Real-world implementations
+- Related system design patterns
+
+### 3. Update README.md
+
+Update the progress tracker table in README.md:
+- Add a new row with the question number and title
+- Set status to "Completed"
+- Create a markdown link to the question folder
+
+Example:
+```markdown
+| 001 | [Design Twitter](./001-Design-Twitter) | Completed |
+```
+
+## Folder Structure
+
+Each question folder follows this structure:
+```
+XXX-Question-Title/
+  ├── question.md
+  ├── concepts.md
+  ├── solution.md
+  └── resources.md
+```
+
+## Important Notes
+
+- All four files must be created for each question
+- Content should be comprehensive and based on the actual discussion
+- Maintain consistent formatting across all questions
+- Use markdown best practices for readability
+- Include diagrams where helpful (ASCII art or mermaid)
