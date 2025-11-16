@@ -23,6 +23,7 @@ XXX-Question-Title/
 | # | Question | Status |
 |---|----------|--------|
 | 001 | [When to Split Monolith into Microservices](./001-When-To-Split-Monolith-Into-Microservices) | Completed |
+| 002 | [Request Flow End-to-End Through Production System](./002-Request-Flow-End-To-End) | Completed |
 
 ## Learning Goals
 
